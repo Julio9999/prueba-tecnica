@@ -51,8 +51,8 @@ export interface Location {
 }
 
 export interface Coordinates {
-    latitude:  string;
-    longitude: string;
+    latitude:  number;
+    longitude: number;
 }
 
 export interface Street {
@@ -85,4 +85,9 @@ export interface Picture {
     large:     string;
     medium:    string;
     thumbnail: string;
+}
+
+export interface UserOption {
+    label: string;
+    id: Coordinates;
 }

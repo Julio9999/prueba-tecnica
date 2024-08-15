@@ -1,14 +1,13 @@
 import './App.css'
 import { MapContainerComponent } from './components/MapContainer'
-import { UsersContainer } from './components/UsersContainer'
+import { UsersQueryProvider } from './context/users/users-data-context'
 
 function App() {
 
   return (
-    <div>
-      <UsersContainer />
+    <UsersQueryProvider>
       <MapContainerComponent />
-    </div>
+    </UsersQueryProvider>
   )
 }
 

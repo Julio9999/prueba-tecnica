@@ -1,17 +1,16 @@
-import { useQuery } from "@tanstack/react-query"
-import { getUsers } from "../services"
+import { useUsersQuery } from "../context";
+import { MarkersContainer } from "./MarkersContainer"
 
-export const UsersContainer = () => {
+export const UsersMarkers = () => {
 
-    const query = useQuery({queryKey: ['users'], queryFn: getUsers, gcTime: 1000 * 60 * 30, staleTime: 1000 * 60 * 30})
+    const query = useUsersQuery();
 
     return (
         <div>
             {
                 query.isFetching 
                 ? (<p>Estoy cargando</p>) 
-                : <span>{JSON.stringify(query.data)}</span>
-            
+                : (<MarkersContainer usersData={query?.data?.data?.results!} />)
             }
         </div>
     )
