@@ -17,17 +17,11 @@ export const useSearchUserComponent = () => {
     }))
 
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        console.log(selectedUser)
-    }
-
     const handleChange = (e: React.SyntheticEvent<Element, Event>, value: UserOption) => {
         setSelectedUser(value)
     }
 
     return {
-        handleSubmit,
         handleChange,
         usersOptions,
         selectedUser

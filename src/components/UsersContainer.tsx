@@ -1,5 +1,5 @@
-import { MarkersContainer } from "./MarkersContainer"
 import { useUsersQuery } from "../hooks";
+import { Markers } from "./Markers";
 
 export const UsersMarkers = () => {
 
@@ -10,7 +10,7 @@ export const UsersMarkers = () => {
     return (
         <div>
             {
-                (<MarkersContainer usersData={data.data.results} />)
+                (<Markers usersData={data.data.results} />)
             }
         </div>
     )
