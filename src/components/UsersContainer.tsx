@@ -1,16 +1,16 @@
-import { useUsersQuery } from "../context";
 import { MarkersContainer } from "./MarkersContainer"
+import { useUsersQuery } from "../hooks";
 
 export const UsersMarkers = () => {
 
-    const query = useUsersQuery();
+    const { data } = useUsersQuery()
+
+    if (!data) return;
 
     return (
         <div>
             {
-                query.isFetching 
-                ? (<p>Estoy cargando</p>) 
-                : (<MarkersContainer usersData={query?.data?.data?.results!} />)
+                (<MarkersContainer usersData={data.data.results} />)
             }
         </div>
     )
