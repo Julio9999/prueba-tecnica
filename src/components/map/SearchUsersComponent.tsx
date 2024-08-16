@@ -1,6 +1,6 @@
 import { Autocomplete, TextField, Box } from "@mui/material"
-import { UserOption } from "../interfaces";
-import { useSearchUserComponent } from "../hooks";
+import { UserOption } from "../../interfaces";
+import { useSearchUserComponent } from "../../hooks";
 
 export const SearchUsersComponent = () => {
 

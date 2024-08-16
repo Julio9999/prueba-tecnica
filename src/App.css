@@ -1,5 +1,5 @@
 #root {
-  /* max-width: 1280px; */
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -8,4 +8,9 @@
 .leaflet-container {
   height: 80vh;
   width: 100vw;
+}
+
+.custom-popup .leaflet-popup-close-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }

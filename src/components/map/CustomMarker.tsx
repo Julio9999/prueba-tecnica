@@ -1,7 +1,7 @@
 import { Marker, Popup } from "react-leaflet"
-import { Result } from "../interfaces";
+import { Result } from "../../interfaces";
 import { Box } from "@mui/material";
-import icon from "./../assets/location.png"
+import icon from "./../../assets/location.png"
 import { Icon } from "leaflet";
 
 interface Props {
@@ -22,7 +22,7 @@ export const CustomMarker = ({ userData }: Props) => {
 
     return (
         <Marker position={[latitude, longitude]} icon={MarkerIcon} riseOnHover >
-            <Popup>
+            <Popup className="custom-popup">
                 <Box sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 2}}>
                     <span>Name: {name.first}</span>
                     <span>Lastname: {name.last}</span>

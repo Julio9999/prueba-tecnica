@@ -1,9 +1,9 @@
 import { Fragment } from "react/jsx-runtime";
-import { useUsersQuery } from "../hooks"
-import { Result } from "../interfaces";
-import { useUsersStore } from "../stores";
+import { useUsersQuery } from "../../hooks"
+import { Result } from "../../interfaces";
+import { useUsersStore } from "../../stores";
+import { CustomMarker } from "..";
 
-import { CustomMarker } from "./CustomMarker"
 
 
 export const Markers = () => {

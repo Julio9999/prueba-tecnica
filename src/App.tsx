@@ -1,5 +1,5 @@
 import './App.css'
-import { MapContainerComponent } from './components/MapContainer'
+import { MapContainerComponent } from './components/map/MapContainer'
 
 function App() {
 
