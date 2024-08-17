@@ -3,12 +3,12 @@ import { UserOption } from "../interfaces";
 
 interface UsersState {
     selectedUser: UserOption | null;
-    setSelectedUser: (user: UserOption) => void;
+    setSelectedUser: (user: UserOption| null) => void;
 }
 
 const storeApi: StateCreator<UsersState> = (set) => ({
     selectedUser: null,
-    setSelectedUser: (user: UserOption) => set({selectedUser: user})
+    setSelectedUser: (user: UserOption | null) => set({selectedUser: user})
 })
 
 

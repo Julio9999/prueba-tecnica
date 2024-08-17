@@ -17,11 +17,12 @@ export const useSearchUserComponent = () => {
     }))
 
 
-    const handleChange = (e: React.SyntheticEvent<Element, Event>, value: UserOption) => {
+    const handleChange = (_: React.SyntheticEvent<Element, Event>, value: UserOption) => {
         setSelectedUser(value)
     }
 
     const handleRefreshUsers = () => {
+        setSelectedUser(null)
         queryClient.invalidateQueries({queryKey: ['users']});
     }
 

@@ -7,7 +7,8 @@ export const SearchUsersComponent = () => {
     const {
         handleChange,
         usersOptions,
-        handleRefreshUsers
+        handleRefreshUsers,
+        selectedUser
     } = useSearchUserComponent()
 
 
@@ -22,6 +23,7 @@ export const SearchUsersComponent = () => {
                 onChange={(e, value) => handleChange(e, value! as UserOption)}
                 getOptionLabel={(option) => option.label}
                 isOptionEqualToValue={(option, value) => option.id.latitude === value.id.latitude && option.id.longitude === value.id.longitude}
+                value={selectedUser}
             />
             <Button
                 sx={{height: '100%'}}
