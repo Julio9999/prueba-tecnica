@@ -1,10 +1,20 @@
+import { CssBaseline } from '@mui/material';
 import './App.css'
-import { MapContainerComponent } from './components/map/MapContainer'
+import { MainContainer } from './components/map/MainContainer'
+import { ThemeProvider } from '@mui/material/styles';
+import { useThemeStore } from './stores/theme.store';
+
+
 
 function App() {
 
+  const { theme } = useThemeStore()
+
   return (
-    <MapContainerComponent />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <MainContainer />
+    </ThemeProvider>
   )
 }
 
