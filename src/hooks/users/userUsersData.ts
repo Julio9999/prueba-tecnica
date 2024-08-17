@@ -7,6 +7,7 @@ export const useUsersQuery = () => {
     const data = queryClient.getQueryData<AxiosResponse<UserAPIResponse, any>>(['users']);
 
     return {
-        data
+        data,
+        queryClient
     }
 }

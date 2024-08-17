@@ -1,4 +1,4 @@
-import { Autocomplete, TextField, Box } from "@mui/material"
+import { Autocomplete, TextField, Box, Button } from "@mui/material"
 import { UserOption } from "../../interfaces";
 import { useSearchUserComponent } from "../../hooks";
 
@@ -7,11 +7,12 @@ export const SearchUsersComponent = () => {
     const {
         handleChange,
         usersOptions,
+        handleRefreshUsers
     } = useSearchUserComponent()
 
 
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, justifyContent: 'center', height: 54 }}>
             <Autocomplete
                 disablePortal
                 id="users"
@@ -22,6 +23,12 @@ export const SearchUsersComponent = () => {
                 getOptionLabel={(option) => option.label}
                 isOptionEqualToValue={(option, value) => option.id.latitude === value.id.latitude && option.id.longitude === value.id.longitude}
             />
+            <Button
+                sx={{height: '100%'}}
+                variant="contained"
+                onClick={() => handleRefreshUsers()}>
+                Actualizar usuarios
+            </Button>
         </Box>
 
     )
