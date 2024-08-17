@@ -8,17 +8,28 @@ export const SearchUsersComponent = () => {
         handleChange,
         usersOptions,
         handleRefreshUsers,
-        selectedUser
+        selectedUser,
+        clearSelectedUser,
+        isReFetching
     } = useSearchUserComponent()
 
 
     return (
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, justifyContent: 'center', height: 54 }}>
+        <Box
+            sx={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 2,
+                justifyContent: 'center',
+                // height: 54,
+                flexWrap: 'wrap'
+            }}
+        >
             <Autocomplete
                 disablePortal
                 id="users"
                 options={usersOptions}
-                sx={{ width: 300 }}
+                sx={{ width: 300}}
                 renderInput={(params) => <TextField {...params} label="Buscar Usuario" />}
                 onChange={(e, value) => handleChange(e, value! as UserOption)}
                 getOptionLabel={(option) => option.label}
@@ -26,8 +37,17 @@ export const SearchUsersComponent = () => {
                 value={selectedUser}
             />
             <Button
-                sx={{height: '100%'}}
                 variant="contained"
+                color="secondary"
+                sx={{ height: '100%' }}
+                disabled={isReFetching || !selectedUser}
+                onClick={() => clearSelectedUser()}>
+                Limpiar
+            </Button>
+            <Button
+                sx={{ height: '100%' }}
+                variant="contained"
+                disabled={isReFetching}
                 onClick={() => handleRefreshUsers()}>
                 Actualizar usuarios
             </Button>

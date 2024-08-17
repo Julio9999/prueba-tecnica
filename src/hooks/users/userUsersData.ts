@@ -4,10 +4,14 @@ import { UserAPIResponse } from "../../interfaces";
 
 export const useUsersQuery = () => {
     const queryClient = useQueryClient();
-    const data = queryClient.getQueryData<AxiosResponse<UserAPIResponse, any>>(['users']);
+    const data = queryClient.getQueryData<AxiosResponse<UserAPIResponse>>(['users']);
+    const queryState = queryClient.getQueryState(['users'])
+    const isReFetching = queryState?.fetchStatus == "fetching"
 
     return {
         data,
-        queryClient
+        queryClient,
+        queryState,
+        isReFetching
     }
 }

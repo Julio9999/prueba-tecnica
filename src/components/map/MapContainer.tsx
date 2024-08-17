@@ -23,13 +23,25 @@ export const MapContainerComponent = () => {
 
     return (
         <>
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 2 }}>
+            <Box sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 2
+            }}>
                 <SearchUsersComponent />
-                <Box sx={{ position: 'relative', width: '100%', height: '500px' }}>
+                <Box sx={{
+                    position: 'relative',
+                    width: '100%',
+                    height: '500px'
+                }}>
                     <MapContainer
                         center={[lat, long]}
                         zoom={1}
-                        style={{ width: '100%', height: '100%' }}
+                        style={{
+                            width: '100%',
+                            height: '100%'
+                        }}
                     >
                         <MapUpdater center={[lat, long]} />
                         <TileLayer
