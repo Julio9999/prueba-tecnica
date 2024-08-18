@@ -1,5 +1,5 @@
 import "leaflet/dist/leaflet.css";
-import { Box } from "@mui/material";
+import { Box, Card } from "@mui/material";
 import { MapContainerComponent, SearchUsersComponent, ToggleTheme } from "..";
 import { useMapContainer } from "../../hooks";
 
@@ -10,7 +10,11 @@ export const MainContainer = () => {
     const { lat, long, isFetching } = useMapContainer();
 
     return (
-        <>
+        <Card 
+            sx={{
+                padding: '1rem'
+            }}
+        >
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -25,6 +29,6 @@ export const MainContainer = () => {
                     isFetching={isFetching}
                 />
             </Box>
-        </>
+        </Card>
     );
 };

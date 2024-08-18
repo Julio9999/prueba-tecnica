@@ -13,13 +13,20 @@ export const ToggleTheme = () => {
                 display: 'flex',
                 width: '100%',
                 justifyContent: 'end',
-                bgcolor: 'background.default',
-                color: 'text.primary',
+                alignItems: 'center',
             }}
         >
-            <IconButton sx={{ ml: 1 }} onClick={() => toggleColorMode()} color="inherit">
-                {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-            </IconButton>
+            <Box
+                sx={{
+                    cursor: 'pointer'
+                }}
+                onClick={() => toggleColorMode()}
+                >
+                <span>Cambiar Tema</span>
+                <IconButton sx={{ ml: 1 }}  color="inherit">
+                    {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                </IconButton>
+            </Box>
         </Box>
     )
 }

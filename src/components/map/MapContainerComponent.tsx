@@ -28,7 +28,7 @@ export const MapContainerComponent = ({lat, long, isFetching}: Props) => {
         <Box sx={{
             position: 'relative',
             width: '100%',
-            height: '500px'
+            height: '70vh',
         }}>
             <MapContainer
                 center={[lat, long]}

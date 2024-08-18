@@ -1,6 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
+import { baseURL } from '../constants';
 
 
 export const httpClient: AxiosInstance = axios.create({
-    baseURL: 'https://randomuser.me/api', 
+    baseURL: baseURL, 
 });

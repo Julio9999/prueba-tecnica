@@ -1,13 +1,21 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 0;
   text-align: center;
 }
 
 .leaflet-container {
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
+}
+
+.dark-theme .leaflet-popup-content-wrapper{
+  background-color: #121212;
+}
+
+.light-theme .leaflet-popup-content-wrapper{
+  background-color: white;
 }
 
 .custom-popup .leaflet-popup-close-button:hover {
