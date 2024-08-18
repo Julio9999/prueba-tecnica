@@ -22,7 +22,7 @@ export const ToggleTheme = () => {
                 }}
                 onClick={() => toggleColorMode()}
                 >
-                <span>Cambiar Tema</span>
+                <span className="select-none">Cambiar Tema</span>
                 <IconButton sx={{ ml: 1 }}  color="inherit">
                     {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
                 </IconButton>

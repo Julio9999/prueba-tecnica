@@ -12,7 +12,7 @@ export const MainContainer = () => {
     return (
         <Card 
             sx={{
-                padding: '1rem'
+                padding: '.5rem 1rem'
             }}
         >
             <Box sx={{

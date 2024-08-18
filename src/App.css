@@ -1,13 +1,17 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem 0;
+  /* padding: 1rem 0; */
   text-align: center;
 }
 
 .leaflet-container {
   height: 100vh;
   width: 100vw;
+}
+
+.select-none{
+  user-select: none;
 }
 
 .dark-theme .leaflet-popup-content-wrapper{
