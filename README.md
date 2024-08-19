@@ -33,7 +33,9 @@ Sigue estos pasos para obtener una copia del proyecto en funcionamiento en tu m√
 3. **Instala las dependencias:**
   ```npm i```
 
-4. **Ejecutar en modo desarrollo:**
+4. **Clonar el archivo .env.template y renombrarlo como .env**
+
+5. **Ejecutar en modo desarrollo:**
   ```npm run dev```
 
 ## Version demo
