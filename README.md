@@ -9,9 +9,9 @@ Aplicación hecha con Vite
 # Librerias Utilizadas
 
 - TanStack Query, para el manejo eficiente de las peticiones http
-- Zustand, para manejar el estado de la aplicacion
-- MUI Material, para contruir la interfaz de usuario
-- react-leaflet, para utilizar el mapa de los usuarios
+- Zustand, para manejar el estado de la aplicación
+- MUI Material, para construir la interfaz de usuario
+- react-leaflet y OpenStreetMap, para utilizar el mapa de los usuarios
 
 ## 🚀 Comenzando
 
@@ -33,9 +33,7 @@ Sigue estos pasos para obtener una copia del proyecto en funcionamiento en tu m�
 3. **Instala las dependencias:**
   ```npm i```
 
-4. **Clonar el archivo .env.template y renombrarlo como .env**
-
-5. **Ejecutar en modo desarrollo:**
+4. **Ejecutar en modo desarrollo:**
   ```npm run dev```
 
 ## Version demo
