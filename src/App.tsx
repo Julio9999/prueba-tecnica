@@ -13,6 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <h1>Buscador de usuarios</h1>
       <MainContainer />
     </ThemeProvider>
   )

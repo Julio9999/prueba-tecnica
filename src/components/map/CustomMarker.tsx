@@ -19,8 +19,6 @@ export const CustomMarker = ({ userData }: Props) => {
     const { latitude, longitude } = location.coordinates;
     const { theme } = useThemeStore();
 
-    console.log(theme.palette.mode === "light");
-
     return (
         <Marker position={[latitude, longitude]} icon={MarkerIcon} riseOnHover>
             <Popup key={theme.palette.mode} className={
